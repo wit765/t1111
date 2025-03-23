@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:8080
+@contentType = application/json
+
+### 创建用户
+POST {{baseUrl}}/api/users
+Content-Type: {{contentType}}
+
+{
+    "name": "张三",
+    "age": 25
+}
+
+### 获取所有用户
+GET {{baseUrl}}/api/users
+
+### 获取特定用户
+GET {{baseUrl}}/api/users/1
+
+### 更新用户
+PUT {{baseUrl}}/api/users/1
+Content-Type: {{contentType}}
+
+{
+    "name": "张三丰",
+    "age": 26
+}
+
+### 删除用户
+DELETE {{baseUrl}}/api/users/1 
